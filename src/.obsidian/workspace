@@ -1,0 +1,98 @@
+{
+  "main": {
+    "id": "f1b01c1bdb293180",
+    "type": "split",
+    "children": [
+      {
+        "id": "7800a04c6d14c00e",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3a1f58970848e952",
+    "type": "split",
+    "children": [
+      {
+        "id": "86393bce413fda93",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d571c86edd59b69c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "3e64c35872f22bd4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "905edf113b2d8066",
+    "type": "split",
+    "children": [
+      {
+        "id": "4868aa4e9c762f4c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "03e05828612c369f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "7800a04c6d14c00e",
+  "lastOpenFiles": [
+    "notes/_inbox/test.md",
+    "notes/shannon-wallace.md",
+    "notes/the-summit.md",
+    "notes/1994-nba-wcf-game5.md",
+    "notes/1992-cotton-bowl.md",
+    "notes/zachary-seider.md",
+    "notes/xmas-2001.md",
+    "notes/wrigley-field.md",
+    "notes/william-wallace.md",
+    "notes/molly-wallace.md"
+  ]
+}

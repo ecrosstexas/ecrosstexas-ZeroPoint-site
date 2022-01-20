@@ -1,0 +1,18 @@
+---
+title: Library
+description:
+permalink: /library/index.html
+layout: base
+eleventyNavigation:
+  key: main
+  title: Library # as it will appear in the nav
+  order: 8 # order to display in the nav
+tags:
+- pages
+---
+<h2>My Library</h2>
+<ul>
+{% for book in collections.library %}
+        <li><a href="{{ book.url | url }}">{{ book.data.seo.title or book.data.title }}</a></li>
+    {% endfor %}
+</ul>

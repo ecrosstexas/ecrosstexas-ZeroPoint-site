@@ -1,0 +1,12 @@
+---
+# http://www.robotstxt.org
+permalink: /robots.txt
+eleventyExcludeFromCollections: true
+excludeFromSitemap: true
+---
+
+# Allow crawling of all content except admin folder
+User-agent: *
+Disallow: /admin
+
+Sitemap: {{ meta.url }}/sitemap.xml

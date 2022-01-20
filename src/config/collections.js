@@ -9,7 +9,7 @@ module.exports = {
   // },
 
   pages: function (collection) {
-    let result = collection.getFilteredByGlob("src/pages/*.md");
+    let result = collection.getFilteredByGlob("src/pages/*");
 
     return result;
   }
