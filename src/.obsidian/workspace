@@ -7,8 +7,12 @@
         "id": "7800a04c6d14c00e",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "posts/2021-03-04-ntp-ruling-elders.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "posts/2021-03-04-ntp-ruling-elders.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,15 +89,15 @@
   },
   "active": "7800a04c6d14c00e",
   "lastOpenFiles": [
+    "posts/2021-03-04-ntp-ruling-elders.md",
+    "notes/2020-winter-classic.md",
+    "notes/cotton-bowl.md",
+    "notes/1992-cotton-bowl.md",
     "notes/_inbox/test.md",
     "notes/shannon-wallace.md",
     "notes/the-summit.md",
     "notes/1994-nba-wcf-game5.md",
-    "notes/1992-cotton-bowl.md",
     "notes/zachary-seider.md",
-    "notes/xmas-2001.md",
-    "notes/wrigley-field.md",
-    "notes/william-wallace.md",
-    "notes/molly-wallace.md"
+    "notes/xmas-2001.md"
   ]
 }
