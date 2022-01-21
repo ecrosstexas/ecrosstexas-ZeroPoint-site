@@ -15,7 +15,7 @@
 	"twitterSite": "ecrosstexas",
 	"twitterCreator": "ecrosstexas",
 
-	"netlifyCMS": "true",
+	"netlifyCMS": "false",
 
 	"indieauth": "true",
  	"indieauthAuth": "https://indieauth.com/auth",
