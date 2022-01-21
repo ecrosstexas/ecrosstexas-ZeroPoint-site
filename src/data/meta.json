@@ -1,0 +1,23 @@
+{
+	"title": "ecrosstexas.com",
+	"description": "The personal website of Eric Wallace, a digital rancher in Plano, Texas.",
+	"lang": "en",
+	"locale": "en_us",
+	"domain": "ecrosstexas.com",
+	"url": "https://www.ecrosstexas.com",
+	"repo": "https://github.com/ecrosstexas/ecrosstexas-tea-base",
+	"author": "Eric Wallace",
+	"authorEmail": "ecrosstexas@gmail.com",
+	"authorUrl": "https://www.ecrosstexas.com/eric/",
+	"image": "/assets/images/meta/default.png",
+	"type": "website",
+	"location": "Plano, Texas, USA",
+	"twitterSite": "ecrosstexas",
+	"twitterCreator": "ecrosstexas",
+
+	"netlifyCMS": "true",
+
+	"indieauth": "true",
+ 	"indieauthAuth": "https://indieauth.com/auth",
+	"indieauthToken": "https://tokens.indieauth.com/token"
+}

@@ -1,0 +1,32 @@
+<footer>
+  <div class="bg-white border-t border-gray-200">
+    <div class="max-w-5xl px-4 pt-4 pb-12 sm:px-20 md:flex md:items-center md:justify-between lg:px-32">
+      <div class="flex justify-center md:order-2">
+
+      {# Display Social icons from \_data/social.json #}
+      {% for site in social %}
+        {% if site.url %}
+        {% set platform = ['svg/', site.platform, '.njk'] %}
+          <a aria-label="Link to {{ site.platform }}" alt="Link to {{ site.platform }}" class="mx-2 w-6 h-6 {{ colors.socialIcons }} hover:{{ colors.socialIconsHover }}" href="{{ site.url | url }}" rel="me">
+            {% include platform | join %}
+          </a>
+        {% endif %}
+      {% endfor %}
+
+      </div>
+      <div class="text-sm leading-6 {{ colors.footerText | default('text-gray-400') }} mt-8 md:mt-0 md:order-1">
+        <p>
+          Copyright &copy; 2001-{{ build.year }}, {{ meta.title }}. Some rights reserved. <br />ecrosstexas is a trademark of Eric Wallace.</p>
+        </p>
+        <p>
+          <a class="underline" href="/colophon/">Made</a> in Plano, Texas.</p>
+        <p>
+          <em>Soli Deo Gloria</em>
+        </p>
+
+        <a title="Back to Top" href="#top">return to top &#8593;</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
