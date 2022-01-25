@@ -1,6 +1,6 @@
 ---
-alias: 1994 Western Conference Final, Game 5
-title:  
+alias: 1994 Western Conference Final Game 5
+title:  1994 Western Conference Final Game 5
 description:
 game_date: 
 layout: base
@@ -18,6 +18,7 @@ June 1994
 - [[the-summit|The Summit]], Houston, Texas
 
 ## Game Summary
+Houston Rockets v Utah Jazz
 
 ## Memories
 

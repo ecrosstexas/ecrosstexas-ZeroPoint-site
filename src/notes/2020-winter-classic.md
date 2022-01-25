@@ -18,6 +18,7 @@ January 1, 2020
 - [[cotton-bowl|Cotton Bowl]], Dallas, Texas
 
 ## Game Summary
+Dallas Stars v Nashville Predators
 
 ## Memories
 

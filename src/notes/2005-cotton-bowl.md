@@ -19,6 +19,7 @@ January 1, 2005
 - [[cotton-bowl|Cotton Bowl]], Dallas, Texas
 
 ## Game Summary
+Texas A&M vs Tennessee Volunteers
 
 ## Memories
 

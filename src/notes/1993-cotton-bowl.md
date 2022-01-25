@@ -19,6 +19,7 @@ January 1, 1993
 - [[cotton-bowl|Cotton Bowl]], Dallas, Texas
 
 ## Game Summary
+Texas A&M vs Notre Dame
 
 ## Memories
 
