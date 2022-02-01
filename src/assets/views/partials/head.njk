@@ -1,5 +1,5 @@
 {# set absolutePageURL to use later in  canonical and og URLs #}
-{%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(build.url) }}{%- endset -%}
+{%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(site.url) }}{%- endset -%}
 {# set image paths here so user/editor doesn't have to deal with full paths #}
 {%- set ogImage -%}
 {% if seo.image %}
@@ -33,7 +33,7 @@
 <meta name="twitter:creator" content="{{ meta.twitterCreator }}">
 <meta name="twitter:title" content="{{ seo.title or title }} | {{ meta.title }}">
 <meta name="twitter:description" content="{{ seo.description or excerpt or meta.description }}">
-<meta name="twitter:image" content="{{ ogImage | url | absoluteUrl(build.url) }}">
+<meta name="twitter:image" content="{{ ogImage | url | absoluteUrl(site.url) }}">
 <meta name="twitter:image:alt" content="image.description" />
 <meta name="twitter:dnt" content="on">
 {# Browser Themes #}

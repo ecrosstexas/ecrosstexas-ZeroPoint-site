@@ -1,3 +1,6 @@
+# dependencies installed by npm
+node_modules/
+
 README.md
 /src/.obsidian
 /src/pages/notes/_inbox

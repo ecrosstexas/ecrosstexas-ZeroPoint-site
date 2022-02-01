@@ -3,7 +3,7 @@ permalink: /about/index.html
 title:  About # will be overwritten by SEO.title below
 description:
 date:  2021-07-22T12:00:00
-layout: base
+layout: page
 body_class:
 eleventyExcludeFromCollections: false
 eleventyNavigation:

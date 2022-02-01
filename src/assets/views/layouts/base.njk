@@ -1,32 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ meta.lang }}" class="no-js">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ seo.title or title }} | {{ meta.title }}</title>
+    <script type="module">
+      document.documentElement.classList.remove('no-js');
+      document.documentElement.classList.add('js');
+    </script>
+    <link rel="stylesheet" href="assets/styles/style.css" defer/>
+    {# need to develop
+    <link rel="stylesheet" href="assets/css/print.css" media="print">
+    #}
+    {%- include "partials/head.njk" %}
 
-    <title>{{ title }}</title>
+    {#{% set prismTomorrow %}{% include "assets/styles/prism/prism-tomorrow.min.css" %}{% endset -%}
+    <style>{{- prismTomorrow | cssmin | safe }}</style>#}
 
-    <link rel="stylesheet" href="{{ '/assets/styles/styles.css' | url }}" />
-    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
-    {% metagen
-        title=title or metadata.title
-    %}
+    {% if meta.netlifyCMS == true %}
+    {% include "partials/admin.njk" %}
+    {% endif %}
 
   </head>
   <body>
-    <a class="visually-hidden" href="#main">Skip to content</a>
-
-    {# Site header with navigation #}
-    <header>
-      {% include "navigation.njk" %}
-    </header>
-
-    {# Main content #}
-    <main id="main" tabindex="-1">
-    {{ content | safe }}
-    </main>
-
-    <script src="/assets/scripts/main.js" defer></script>
+    <a href="#content" class="hidden">Skip to content</a>
+    <div class="flex flex-col min-h-screen">
+      <!--{% include "partials/dev-mode.njk" %}-->
+      {% include "partials/nav.njk" %}
+      <div class="flex-grow mx-4 my-12 sm:mx-20 lg:mx-32 ">
+        <main class="prose sm:prose-lg" id="content">
+          {{ content | safe }}
+        </main>
+      </div>
+      {% include "partials/footer.njk" %}
+    </div>
   </body>
 </html>

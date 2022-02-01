@@ -4,14 +4,15 @@
       <div class="flex justify-center md:order-2">
 
       {# Display Social icons from \_data/social.json #}
-      {% for site in social %}
+
+      {# {% for site in social %}
         {% if site.url %}
         {% set platform = ['svg/', site.platform, '.njk'] %}
           <a aria-label="Link to {{ site.platform }}" alt="Link to {{ site.platform }}" class="mx-2 w-6 h-6 {{ colors.socialIcons }} hover:{{ colors.socialIconsHover }}" href="{{ site.url | url }}" rel="me">
             {% include platform | join %}
           </a>
         {% endif %}
-      {% endfor %}
+      {% endfor %} #}
 
       </div>
       <div class="text-sm leading-6 {{ colors.footerText | default('text-gray-400') }} mt-8 md:mt-0 md:order-1">

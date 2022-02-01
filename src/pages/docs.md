@@ -3,7 +3,7 @@ title: Documentation # will be overwritten by SEO.title below
 description: When you really need to read the documentation.
 permalink: /docs/index.html
 date:  2020-09-20
-layout: base
+layout: page
 body_class:
 seo:
   title: Documentation # overrides 'title' above on both Page and META

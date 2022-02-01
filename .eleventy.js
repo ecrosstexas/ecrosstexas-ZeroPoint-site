@@ -1,54 +1,72 @@
 const passthroughs = require('./src/config/passthroughs');
 const collections = require('./src/config/collections');
-const directoryOutputPlugin = require("@11ty/eleventy-plugin-directory-output");
 const filters = require('./src/config/filters');
 const watchtargets = require('./src/config/watchtargets');
 const plugins = require('./src/config/plugins');
 const shortcodes = require('./src/config/shortcodes');
 const templateLanguages = require('./src/config/templateLanguages');
 const fs = require("fs");
+const directoryOutputPlugin = require("@11ty/eleventy-plugin-directory-output");
+const embedEverything = require("eleventy-plugin-embed-everything");
+const pluginRss = require('@11ty/eleventy-plugin-rss');
+const pluginNavigation  = require('@11ty/eleventy-navigation');
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const path = require('path');
+
+
 
 /**
  * Eleventy configuration
  * https://www.11ty.dev/docs/config/
  */
-module.exports = function (eleventyConfig) {
+ module.exports = function (eleventyConfig) {
 
   /**
    * Start pretty console output
    */
-  console.group("\n", "🪐 —");
+  console.group("\n", "   🪐");
+  console.log("  |");
 
   /**
    * Echo the registered collections in the terminal
    * Create collections from /src/config/collections.js
    */
-  console.group("📚 Collections (/src/config/collections.js)");
-  Object.keys(collections).forEach((collectionName) => {
-    console.log(" · " + collectionName);
+  console.group("  ├── 📚", "\x1b[33m", "Collections", "\x1b[0m", "(/src/config/collections.js)");
+  Object.keys(collections).forEach((collectionName, index, collections) => {
+    let len = Object.keys(collections).length - 1;
+    let pre = (index === len ? "└── " : "├── ");
+    console.log("│       " + pre + collectionName);
     eleventyConfig.addCollection(collectionName, collections[collectionName])
   });
   console.groupEnd();
-  console.log("\n");
+  console.log("  |");
 
   /**
    * Echo the registered collections in the terminal
    * Add Eleventy plugins from /src/config/plugins.js
    */
-  console.group("🔌 Plugins (/src/config/plugins.js)");
-  Object.keys(plugins).forEach((pluginName) => {
-    console.log(" · " + pluginName);
+  console.group("  ├── 🔌", "\x1b[33m", "Plugins", "\x1b[0m", "(/src/config/plugins.js)");
+  Object.keys(plugins).forEach((pluginName, index) => {
+    let len = Object.keys(plugins).length - 1;
+    let pre = (index == len ? "└── " : "├── ");
+    console.log("│       " + pre + pluginName);
     plugins[pluginName](eleventyConfig);
   });
   console.groupEnd();
-
+  console.log("  |");
   /**
+   * Echo the registered shortcodes in the terminal
    * Add shortcodes from /src/config/shortcodes.js
    */
-  Object.keys(shortcodes).forEach((shortcodeName) => {
-    eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName]);
+  console.group("  └── ⏩", "\x1b[33m", "Shortcodes", "\x1b[0m", "(/src/config/shortcodes.js)");
+  Object.keys(shortcodes).forEach((shortcodeName, index) => {
+    let len = Object.keys(shortcodes).length - 1;
+    let pre = (index === len ? "└── " : "├── ");
+    console.log("        " + pre + shortcodeName);
+    shortcodes[shortcodeName](eleventyConfig);
   });
-
+  console.groupEnd();
+  console.log("\n");
   /**
    * Add filters from /src/config/filters.js
    */
@@ -84,20 +102,6 @@ module.exports = function (eleventyConfig) {
   console.log("\n");
   console.groupEnd();
 
-/**
-   * https://www.11ty.dev/docs/plugins/directory-output/
-   */
- eleventyConfig.setQuietMode(true);
- eleventyConfig.addPlugin(directoryOutputPlugin, {
-   // Customize columns
-   columns: {
-     filesize: true, // Use `false` to disable
-     benchmark: true, // Use `false` to disable
-   },
-
-   // Will show in yellow if greater than this number of bytes
-   warningFileSize: 400 * 1000,
- });
 
   /**
    * Configure browsersync
@@ -123,6 +127,18 @@ module.exports = function (eleventyConfig) {
    */
   eleventyConfig.setQuietMode(true);
 
+
+  eleventyConfig.addPlugin(pluginRss)
+  eleventyConfig.addPlugin(pluginNavigation)
+  eleventyConfig.addPlugin(syntaxHighlight)
+  eleventyConfig.addPlugin(require("@mikestreety/11ty-utils"))
+
+  /**
+	 * Add layout aliases
+	 * @link https://www.11ty.dev/docs/layouts/#layout-aliasing
+   *
+	 */
+
   /**
    * Return the config to Eleventy
    */
@@ -134,6 +150,6 @@ module.exports = function (eleventyConfig) {
       layouts: 'assets/views/layouts',
       data: 'data',
     },
-    templateFormats: ['njk', 'md', 'html', '11ty.js'],
+    templateFormats: ['njk', 'md', '11ty.js'],
   };
 };

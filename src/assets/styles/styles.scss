@@ -5,7 +5,7 @@
 @import "branding";
 
 /**
- * ecrosstexas_site starter styling
+ * ZeroPoint starter styling
 */
 body {
   color: var(--color-text);
@@ -26,6 +26,11 @@ a {
   display: flex;
   border-bottom: 1px solid var(--color-light);
   margin: var(--unit);
+}
+
+hr {
+  border-width: 1px 0 0;
+  border-color: var(--color-light);
 }
 
 .navigation-item,
